@@ -1,0 +1,21 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+
+  <br>
+  <br>
+  <h1>Welcome, {{ user.first_name }} 👋!</h1>
+  <br>
+  <div>
+    <p>This is where you can enter everything you remember from your dream.
+    <br>
+    So let's get started. What would you like to remember?</p>
+  <br>
+  <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Try it now</a>
+  </div>
+
+{% if user.is_authenticated %}
+
+{% endif %}
+
+{% endblock %}

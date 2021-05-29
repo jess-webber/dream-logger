@@ -1,0 +1,25 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+
+<div class="col-md-6 offset-md-3">
+  <br>
+  <br>
+  <h1>Hey, {{ user.first_name }} 👋</h1>
+  <div>
+  What did you dream last night?
+  <form action="/your-name/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+  </form>
+  <br>
+  <br>
+  <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Try it now</a>
+  </div>
+</div>
+{% if user.is_authenticated %}
+
+{% endif %}
+
+{% endblock %}

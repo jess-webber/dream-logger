@@ -1,0 +1,26 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+
+<title>Sentences</title>
+</head>
+<body>
+
+
+  <h1>List of Sentences</h1>
+
+  {% for sentence in allsentences %}
+  {{ sentence }}
+  <br><br>
+
+
+  <br><br>
+  {% endfor %}
+
+</body>
+
+{% if user.is_authenticated %}
+
+{% endif %}
+
+{% endblock %}
