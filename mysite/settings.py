@@ -20,13 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!#
-# SECRET_KEY = '2_l(k#i1xj4amn7(yl*)$wydn^s(y+t&#2k%!%mbhablj5zsyc'
-import os
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '2_l(k#i1xj4amn7(yl*)$wydn^s(y+t&#2k%!%mbhablj5zsyc')
+SECRET_KEY = '2_l(k#i1xj4amn7(yl*)$wydn^s(y+t&#2k%!%mbhablj5zsyc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = True
+#DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['*']
 
@@ -124,8 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-…
 # Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
-TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
