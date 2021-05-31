@@ -3,10 +3,12 @@
 {% block content %}
 
 <body>
-    <div class="col-md-6 offset-md-3 text-center">
+    <div class="col-md-6 offset-md-3">
         <h1>Hey, {{ user.first_name }} 👋</h1>
         <div>
+        <p>
         What did you dream last night?
+        </p>
         <br>
         <br>
         </div>
@@ -23,7 +25,9 @@
     <br>
     <br>
     <div class="col-md-6 offset-md-3">
+    <p>
     View what you've <a href="{% url 'allsnips' %}">saved.</a>
+    </p>
     </div>
 </body>
 </html>

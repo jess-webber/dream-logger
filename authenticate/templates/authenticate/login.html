@@ -1,9 +1,24 @@
+
+
 {% extends 'authenticate/base.html' %}
 
 {% block content %}
-
+<style>
+{% load static %}
+body {
+background: url('{% static 'authenticate/blank_sky.jpg' %}');
+height: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+p {
+	text-align: center;
+}
+</style>
+<body>
 <h2 class="text-center">Login</h2>
-
+<br>
 <div class="col-md-6 offset-md-3">
 	<form method="POST">
 		{% csrf_token %}
@@ -19,12 +34,34 @@
 
 		<div class="container">
 		  <div class="row">
-		    <div class="col text-center">
+		    <div class="col">
+			<br>
 		      <button type="submit" class="btn btn-primary btn-lg">Login</button>
-					<br>
-					<br>
-					<p>New to NightNotes? Sign up <a href="{% url 'register' %}">here.</a></p>
-				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<p>New to NightNotes? Sign up <a href="{% url 'register' %}">here.</a></p>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
 			</div>
 		</div>
 	</form>
