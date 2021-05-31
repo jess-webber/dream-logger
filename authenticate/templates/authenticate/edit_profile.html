@@ -2,10 +2,11 @@
 
 {% block content %}
 
-<h1 class='text-center'>Edit Profile</h1>
+<h1>Edit Profile</h1>
 
-<div class="col-md-6 offset-md-3">
+<div class="col-md-10">
   <form method="POST" actin="{% url 'edit_profile' %}">
+    <div class="col-md-5">
     {% csrf_token %}
 
     {% if form.errors %}
@@ -25,10 +26,11 @@
     {% endif %}
 
     {{ form.as_p }}
-
+    </div>
     <div class="container">
 		  <div class="row">
-		    <div class="col text-center">
+		    <div class="col">
+            <br>
 		      <input type="submit" value="Update Profile" class="btn btn-primary btn-lg">
 					<br>
 					<br>

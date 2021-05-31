@@ -3,9 +3,9 @@ from django.http import HttpResponse
 from .forms import SnippetForm
 from .models import Snippet
 from django.contrib import messages
-# Create your views here.
+
 def allsnips(request):
-    snipps = Snippet.objects.all()
+    snipps = Snippet.objects.filter(user=request.user)
     return render(request, 'allsnips.html', {'snipps' : snipps})
 
 def snippet_detail(request):
