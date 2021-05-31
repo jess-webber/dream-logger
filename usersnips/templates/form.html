@@ -3,17 +3,17 @@
 {% block content %}
 
 <body>
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-10">
         <h1>Hey, {{ user.first_name }} 👋</h1>
         <div>
         <p>
-        What did you dream last night?
-        </p>
         <br>
+        So what did you dream last night? Start logging your dreams here.
+        </p>
         <br>
         </div>
         <form method="post" enctype="multipart/form-data">
-            <div class="col-md-12">
+            <div class="col-md-5">
             {% csrf_token %}
             {{ form.as_table }}
             <br>
@@ -24,10 +24,19 @@
     </div>
     <br>
     <br>
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-10">
     <p>
     View what you've <a href="{% url 'allsnips' %}">saved.</a>
     </p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     </div>
 </body>
 </html>

@@ -18,7 +18,7 @@ def snippet_detail(request):
             obj.user = request.user;
             obj.save()
             form = SnippetForm()
-            messages.success(request, "Snippet saved!")
+            messages.success(request, "Dream saved!")
 
 
     return render(request, 'form.html', {'form':form})

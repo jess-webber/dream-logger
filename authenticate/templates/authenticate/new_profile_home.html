@@ -7,11 +7,11 @@
   <h1>Welcome, {{ user.first_name }} 👋!</h1>
   <br>
   <div>
-    <p>This is where you can enter everything you remember from your dream.
+    <p>And thanks for signing up! You're just one step away from tracking your dreams.
     <br>
-    So let's get started. What did you dream last night?</p>
+    Just log in to get started</p>
   <br>
-  <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Try it now</a>
+  <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Log in now</a>
   </div>
 
 {% if user.is_authenticated %}
