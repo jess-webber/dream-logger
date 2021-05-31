@@ -3,7 +3,8 @@
 {% block content %}
 
 <body>
-    <h2>Here's what you've saved so far</h2>
+    <h2>Here's what you've dreamed so far 🌙</h2>
+    <br>
     <div class="topnav">
     </div>
     <p>
@@ -11,8 +12,8 @@
 
         {% if user.is_authenticated %}
                 {% for snips in snipps %}
-                    <p>{{snips.snip_description}}</p>
                     <p><strong>{{snips.topic_description}}</strong></p>
+                    <p>{{snips.snip_description}}</p>
                 {% endfor %}
 
         {% else %}
