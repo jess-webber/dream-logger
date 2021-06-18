@@ -1,19 +1,38 @@
 {% extends 'authenticate/base.html' %}
 
 {% block content %}
-
+<style>
+h1 {
+font-size: 24px;
+}
+.box {
+    border: solid 1px grey;
+    background-color: #F5F5F5;
+    padding: 10px;
+    margin-bottom: 30px;
+    width: 400px;
+    border-radius: 20px;
+}
+.description {
+    border-bottom: solid 1px grey;
+    border-bottom-style: dotted;
+}
+p {
+color: black;
+}
+</style>
 <body>
-    <h2>Here's what you've dreamed so far 🌙</h2>
+    <h1>Here's what you've dreamed so far 🌙</h1>
     <br>
     <div class="topnav">
     </div>
-    <p>
+    <div class="box">
 
 
         {% if user.is_authenticated %}
                 {% for snips in snipps %}
                     <p><strong>{{snips.topic_description}}</strong></p>
-                    <p>{{snips.snip_description}}</p>
+                    <p class="description">{{snips.snip_description}}</p>
                     <br>
                 {% endfor %}
 
@@ -22,7 +41,8 @@
 
         {% if user.is_authenticated %}
         <br>
-        <a href="{% url 'snippet_detail' %}" class="btn btn-primary btn-lg" role="button">Log another dream</a>
+        </div>
+        <a href="{% url 'snippet_detail' %}" class="btn btn-primary btn-lg" role="button">Add a dream</a>
         {% else %}
         <p>You need to login to see your snips.</p>
         <br>

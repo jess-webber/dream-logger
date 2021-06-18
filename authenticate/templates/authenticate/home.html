@@ -5,11 +5,16 @@
     h2 {
     font-size: 5em;
     }
+    .btn-primary {
+    background-color: #FFB6C1;
+    }
+
 </style>
 
 {% extends 'authenticate/base.html' %}
 
 {% block content %}
+<body>
   <div class="col-md-10">
   <br>
   <br>
@@ -19,9 +24,9 @@
   Keep notes on all your dreams with this handy tool.
   <br>
   <br>
-  <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Try it now</a>
+  <a type="button" class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Try it now</a>
   <br>
   </div>
   </div>
-
+<body>
 {% endblock %}

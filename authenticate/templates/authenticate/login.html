@@ -6,20 +6,32 @@
 <style>
 {% load static %}
 body {
-background: url('{% static 'authenticate/blank_sky.jpg' %}');
+background: url('{% static 'authenticate/black-sky.jpg' %}');
 height: 100%;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
+h1 {
+    font-size: 24px;
+}
 p {
 	text-align: center;
 }
+.mb-3 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.btn {
+	margin-bottom: 50px;
+}
 </style>
 <body>
-<h2 class="text-center">Login</h2>
+<h1 class="text-center">Login</h1>
 <br>
-<div class="col-md-6 offset-md-3">
+
+<div class="col-md-4 offset-md-4">
 	<form method="POST">
 		{% csrf_token %}
 
@@ -38,30 +50,7 @@ p {
 			<br>
 		      <button type="submit" class="btn btn-primary btn-lg">Login</button>
 			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 			<p>New to NightNotes? Sign up <a href="{% url 'register' %}">here.</a></p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
 			</div>
 		</div>
 	</form>

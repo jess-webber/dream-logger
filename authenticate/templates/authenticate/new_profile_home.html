@@ -1,7 +1,12 @@
 {% extends 'authenticate/base.html' %}
 
 {% block content %}
-
+<style>
+.btn {
+    margin-bottom: 300px;
+}
+</style>
+<body>
   <br>
   <br>
   <h1>Welcome, {{ user.first_name }}! 👋</h1>
@@ -13,7 +18,7 @@
   <br>
   <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Log in now</a>
   </div>
-
+</body>
 {% if user.is_authenticated %}
 
 {% endif %}

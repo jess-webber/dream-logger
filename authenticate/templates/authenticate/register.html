@@ -4,15 +4,19 @@
 <style>
 {% load static %}
 body {
-background: url('{% static 'authenticate/blank_sky.jpg' %}');
+background: url('{% static 'authenticate/black-sky.jpg' %}');
 height: 100%;
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 }
+h1 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
 </style>
 <body>
-<h1 class='text-center'>Register</h1>
+<h1 class='text-center'>Sign up</h1>
 
 <div class="col-md-6 offset-md-3">
   <form method="POST" actin="{% url 'register' %}">
